@@ -98,6 +98,35 @@
       margin-top: 15px;
     }
 
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
     @media (min-width: 768px) {
       .services, .pricing {
         grid-template-columns: 1fr 1fr;
@@ -178,13 +207,28 @@
   </section>
 
   <section>
-    <h2>Shop Now</h2>
-    <p style="text-align:center;">Support our designs and buy your custom site setup or templates online.</p>
-    <div style="text-align:center;">
-      <a class="whatsapp-btn" style="background-color:#0077cc;" href="https://pay.yoco.com/yourshoplink" target="_blank">
-        🛒 Shop Now via Yoco
-      </a>
-    </div>
+    <h2>Order a Design</h2>
+    <p style="text-align:center;">Fill in your order below and we'll get back to you!</p>
+    <form action="mailto:funsaledesigns@gmail.com" method="POST" enctype="text/plain">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="product">Choose Product:</label>
+      <select id="product" name="product">
+        <option value="Starter Site - R750">Starter Site - R750</option>
+        <option value="Full Business Site - R1800">Full Business Site - R1,800</option>
+        <option value="Template + Setup - R950">Template + Setup - R950</option>
+        <option value="Domain + QR Setup - R500">Domain + QR Setup - R500</option>
+      </select>
+
+      <label for="notes">Extra Info or Questions:</label>
+      <textarea id="notes" name="notes" rows="5" placeholder="Let us know if you want something custom..."></textarea>
+
+      <button type="submit">📩 Submit Order</button>
+    </form>
   </section>
 
   <footer>
